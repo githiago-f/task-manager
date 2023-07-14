@@ -51,6 +51,7 @@ O sistema permite que os usuários criem, leiam, atualizem e excluam tarefas. Ca
 * [ ] Tratamento de erros: Implemente um tratamento adequado de erros, retornando respostas de erro apropriadas e tratando exceções de forma adequada.
 * [ ] Testes automatizados: Escreva testes automatizados, incluindo testes unitários, testes de integração e testes de API.
 Documentação: explicação para construir o app localmente, histórico e workflow de git
+* [ ] Documentação: Utilizar técnicas para gerar documentação das rotas desenvolvidas. 
 
 
 
