@@ -36,21 +36,3 @@ TODO
 * [ ] Testes automatizados: Escreva testes automatizados, incluindo testes unitários, testes de integração e testes de API.
 Documentação: explicação para construir o app localmente, histórico e workflow de git
 * [x] Documentação: Utilizar técnicas para gerar documentação das rotas desenvolvidas. 
-
-
-
-## Entrega
-
-Para realizar a entrega do desafio, você deverá enviar para o recrutador o link para o repositório com seu código. Exemplo:
-
-https://github.com/seu-nome/fullstack-challenge.git
-
-Não se esqueça de criar um arquivo `README.md` contendo as instruções para construir o app localmente.
-
-:bangbang: **Importante!** O repositório com seu código deve estar publico, para que possamos acessa-lo!
-
-## Feedback
-
-Na Uhuu, valorizamos muito o fator humano e feedbacks. Acreditamos que o feedback é essencial para melhorar, aprender e facilitar processos. Dessa forma, assim que o seu desafio for submetido, prometemos enviar um feedback técnico nos próximos dias usando todos os critérios de avaliação descritos acima.
-
-
