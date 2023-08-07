@@ -7,7 +7,7 @@ import { TasksController } from './app/controllers/tasks/tasks.controller';
 import { UsersController } from './app/controllers/users/users.controller';
 import { TaskRepository } from './core/tasks/task.repository';
 import { UserService } from './core/users/service/user/user.service';
-import { Encription } from './core/users/providers/encription/encryption';
+import { Encryption } from './core/users/providers/encryption/encryption';
 import { UserRepository } from './core/users/user.repository';
 import typeormConfig from './app/config/typeorm-config';
 import authConfig from './app/config/auth-config';
@@ -25,7 +25,7 @@ import authConfig from './app/config/auth-config';
     TaskRepository, 
     UserRepository, 
     UserService, 
-    Encription
+    Encryption
   ],
 })
 export class AppModule {}

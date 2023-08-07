@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Encription } from '../../providers/encription/encryption';
+import { Encryption } from '../../providers/encryption/encryption';
 import { SignInCredentials } from 'src/app/controllers/users/dto/signin.credentials';
 import { SignUpCredentials } from 'src/app/controllers/users/dto/signup.credentials';
 import { UserRepository } from '../../user.repository';
@@ -11,12 +11,16 @@ import { AlreadyHasAnAccountException } from '../erros/already-has-account.excep
 export class UserService {
     constructor(
         private userRepository: UserRepository,
-        private encription: Encription,
+        private encription: Encryption,
         private jwtService: JwtService
     ) {}
 
     async signIn({ email, password }: SignInCredentials) {
         const user = await this.userRepository.findByEmail(email);
+        if(!user) {
+            await this.encription.hash('timeout');
+            throw new InvalidCredentialsException();
+        }
         const valid = await user.comparePasswords(
             (hash) => this.encription.compare(password, hash));
         if(!valid) {
