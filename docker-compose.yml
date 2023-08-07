@@ -1,0 +1,30 @@
+version: '3.7'
+
+services:
+  database:
+    image: postgres:15.1-alpine
+    ports:
+      - "54321:5432"
+    environment:
+      - POSTGRES_USER=db
+      - POSTGRES_DB=db
+      - POSTGRES_PASSWORD=db
+    networks:
+      - task-manager
+  # cache:
+  backend:
+    image: task-manager_api
+    build: 
+      dockerfile: ./docker/Dockerfile
+      context: ./task-manager
+    ports:
+      - "8443:8443"
+    networks:
+      - task-manager
+    depends_on:
+      - database
+  # frontend:
+
+networks:
+  task-manager:
+    driver: bridge
