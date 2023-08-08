@@ -14,7 +14,7 @@ import authConfig from './app/config/auth-config';
 
 @Module({
   imports: [
-    ConfigModule.forRoot(),
+    ConfigModule.forRoot({ ignoreEnvFile: process.env.IS_DOCKER === 'true' }),
     ConfigModule.forFeature(serverConfig),
     typeormConfig,
     authConfig
