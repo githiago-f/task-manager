@@ -4,7 +4,21 @@ The system allows users to create, read, update and delete tasks. Each task has 
 
 ## Starting the project
 
-TODO
+```bash
+## Generate the required certs and encryption keys
+./cert-generate.sh 
+
+## Run the back-end along with the database
+docker compose up
+```
+
+## Testing
+
+### Check the coverage for this project
+```bash
+cd ./task-manager
+pnpm test:cov 
+```
 
 ## Features
 
