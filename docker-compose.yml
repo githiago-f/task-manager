@@ -11,6 +11,11 @@ services:
       - POSTGRES_PASSWORD=db
     networks:
       - task-manager
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
   # cache:
   backend:
     image: task-manager_api
@@ -37,7 +42,8 @@ services:
       - database
     volumes:
       - task-vol:/app
-  # frontend:
+    mem_limit: 500m
+    cpus: 0.5
 
 networks:
   task-manager:

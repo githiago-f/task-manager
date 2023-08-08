@@ -6,7 +6,9 @@ import { cwd } from "process";
 import { User } from "src/core/users/user";
 import { Task } from "src/core/tasks/task";
 
-config();
+if(process.env.IS_DOCKER !== 'true') {
+    config();
+}
 
 const options = {
     type: process.env.DB_DRIVER || 'postgres',

@@ -11,4 +11,4 @@ RUN pnpm build
 EXPOSE 8443
 EXPOSE 8080
 
-CMD ["node", "dist/main"]
+CMD pnpm migration:run && pnpm start
