@@ -37,16 +37,13 @@ pnpm test:cov
 
   * Users may be able to filter their tasks with information like status, showing only finished tasks or in progress.
 
-### Testes:
-
-  * O candidato deve escrever testes unitários para garantir o bom funcionamento do sistema e a validação dos endpoints da API.
-
+----
 
 ## Critérios de avaliação
 
 * [x] Separação de responsabilidades: Divida seu código em módulos e camadas com responsabilidades claras. Isso facilita a compreensão e a manutenção do código.
 * [x] Validação de dados: Realize validação adequada dos dados de entrada, tanto do lado do cliente como do servidor. Utilize bibliotecas de validação ou crie suas próprias funções de validação.
 * [x] Tratamento de erros: Implemente um tratamento adequado de erros, retornando respostas de erro apropriadas e tratando exceções de forma adequada.
-* [ ] Testes automatizados: Escreva testes automatizados, incluindo testes unitários, testes de integração e testes de API.
+* [x] Testes automatizados: Escreva testes automatizados, incluindo testes unitários, testes de integração e testes de API.
 Documentação: explicação para construir o app localmente, histórico e workflow de git
 * [x] Documentação: Utilizar técnicas para gerar documentação das rotas desenvolvidas. 
